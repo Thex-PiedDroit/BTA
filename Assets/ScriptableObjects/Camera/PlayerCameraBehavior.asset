@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ced52ca61f3764ca63ee65b93891b4, type: 3}
+  m_Name: PlayerCameraBehavior
+  m_EditorClassIdentifier: 
+  m_offsetFromTarget: {x: 0, y: 10.75, z: -12}
+  m_defaultRotation: {x: 38, y: 0, z: 0}
+  m_maxMouseDistanceForLookup: 10
+  m_lookupDistanceFromMouse: 0.2
+  m_smoothFollowFactor:
+    m_min: 0.4
+    m_max: 0.6
