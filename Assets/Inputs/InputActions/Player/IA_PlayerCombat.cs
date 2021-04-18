@@ -25,6 +25,14 @@ public class @IA_PlayerCombat : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""LeftHand"",
+                    ""type"": ""Button"",
+                    ""id"": ""8090af23-39e8-4573-9efa-f7a43518ee84"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -36,6 +44,17 @@ public class @IA_PlayerCombat : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""MK"",
                     ""action"": ""RightHand"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f728795a-d3f3-4cf6-bad6-c6f62023c38d"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MK"",
+                    ""action"": ""LeftHand"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -64,6 +83,7 @@ public class @IA_PlayerCombat : IInputActionCollection, IDisposable
         // Combat
         m_Combat = asset.FindActionMap("Combat", throwIfNotFound: true);
         m_Combat_RightHand = m_Combat.FindAction("RightHand", throwIfNotFound: true);
+        m_Combat_LeftHand = m_Combat.FindAction("LeftHand", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -114,11 +134,13 @@ public class @IA_PlayerCombat : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Combat;
     private ICombatActions m_CombatActionsCallbackInterface;
     private readonly InputAction m_Combat_RightHand;
+    private readonly InputAction m_Combat_LeftHand;
     public struct CombatActions
     {
         private @IA_PlayerCombat m_Wrapper;
         public CombatActions(@IA_PlayerCombat wrapper) { m_Wrapper = wrapper; }
         public InputAction @RightHand => m_Wrapper.m_Combat_RightHand;
+        public InputAction @LeftHand => m_Wrapper.m_Combat_LeftHand;
         public InputActionMap Get() { return m_Wrapper.m_Combat; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -131,6 +153,9 @@ public class @IA_PlayerCombat : IInputActionCollection, IDisposable
                 @RightHand.started -= m_Wrapper.m_CombatActionsCallbackInterface.OnRightHand;
                 @RightHand.performed -= m_Wrapper.m_CombatActionsCallbackInterface.OnRightHand;
                 @RightHand.canceled -= m_Wrapper.m_CombatActionsCallbackInterface.OnRightHand;
+                @LeftHand.started -= m_Wrapper.m_CombatActionsCallbackInterface.OnLeftHand;
+                @LeftHand.performed -= m_Wrapper.m_CombatActionsCallbackInterface.OnLeftHand;
+                @LeftHand.canceled -= m_Wrapper.m_CombatActionsCallbackInterface.OnLeftHand;
             }
             m_Wrapper.m_CombatActionsCallbackInterface = instance;
             if (instance != null)
@@ -138,6 +163,9 @@ public class @IA_PlayerCombat : IInputActionCollection, IDisposable
                 @RightHand.started += instance.OnRightHand;
                 @RightHand.performed += instance.OnRightHand;
                 @RightHand.canceled += instance.OnRightHand;
+                @LeftHand.started += instance.OnLeftHand;
+                @LeftHand.performed += instance.OnLeftHand;
+                @LeftHand.canceled += instance.OnLeftHand;
             }
         }
     }
@@ -154,5 +182,6 @@ public class @IA_PlayerCombat : IInputActionCollection, IDisposable
     public interface ICombatActions
     {
         void OnRightHand(InputAction.CallbackContext context);
+        void OnLeftHand(InputAction.CallbackContext context);
     }
 }
