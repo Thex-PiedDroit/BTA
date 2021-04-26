@@ -6,7 +6,6 @@
     "com.unity.textmeshpro": "3.0.4",
     "com.unity.timeline": "1.5.4",
     "com.unity.ugui": "1.0.0",
-    "nrjwolf.games.attachattributes": "https://github.com/Nrjwolf/unity-auto-attach-component-attributes.git",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -37,6 +36,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "nrjwolf.games.attachattributes": "https://github.com/Nrjwolf/unity-auto-attach-component-attributes.git"
   }
 }

@@ -17,5 +17,5 @@ MonoBehaviour:
   m_maxMouseDistanceForLookup: 10
   m_lookupDistanceFromMouse: 0.2
   m_smoothFollowFactor:
-    m_min: 0.4
-    m_max: 0.6
+    Min: 0.4
+    Max: 0.6

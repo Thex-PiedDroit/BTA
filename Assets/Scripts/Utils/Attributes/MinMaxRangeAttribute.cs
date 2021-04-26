@@ -14,35 +14,36 @@ public class MinMaxRangeAttribute : PropertyAttribute
 }
 
 [System.Serializable]
-public class MinMaxRange
+public struct MinMaxRange
 {
-	[SerializeField]
-	private float m_min = 0.0f;
-	[SerializeField]
-	private float m_max = 1.0f;
-	public float Min => m_min;
-	public float Max => m_max;
+	public float Min;
+	public float Max;
 
+	/// <summary>
+	/// The delta between Max and Min.
+	/// </summary>
+	public float Spread => Max - Min;
 
-	public MinMaxRange()
-	{
-
-	}
 
 	public MinMaxRange(float min, float max)
 	{
-		m_min = min;
-		m_max = max;
+		Min = min;
+		Max = max;
 	}
 
-	public float RandomValue
+	public MinMaxRange(MinMaxRange other)
 	{
-		get
-		{
-			return Random.Range(Min, Max);
-		}
+		Min = other.Min;
+		Max = other.Max;
 	}
 
+	/// <summary>
+	/// Returns a random value within the Min and Max values of this range.
+	/// </summary>
+	public float GetRandom()
+	{
+		return Random.Range(Min, Max);
+	}
 
 	static public bool operator >(MinMaxRange range, float value)
 	{
