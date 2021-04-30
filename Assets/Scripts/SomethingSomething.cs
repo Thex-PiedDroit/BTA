@@ -9,6 +9,9 @@ public class SomethingSomething : MonoBehaviour
 	[SerializeField]
 	private GameObject m_stuffObject = null;
 
+	[SerializeField]
+	private Transform m_stuffTransform = null;
+
 	#endregion
 
 #region Variables (private)
@@ -21,5 +24,6 @@ public class SomethingSomething : MonoBehaviour
 	private void OnEnable()
 	{
 		Debug.Log(m_stuffObject);
+		Debug.Log(m_stuffTransform);
 	}
 }
