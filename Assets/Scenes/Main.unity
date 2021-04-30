@@ -672,8 +672,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_stuffObject: {fileID: 5849126179884274143}
+  m_stuffCollider1: {fileID: 5849126179884274144}
   m_stuffTransform: {fileID: 5849126179884274145}
-  m_stuffCollider: {fileID: 5849126179884274144}
+  m_stuffCollider2: {fileID: 225773663}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

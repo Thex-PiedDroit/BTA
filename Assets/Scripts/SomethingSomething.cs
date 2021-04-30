@@ -10,10 +10,13 @@ public class SomethingSomething : MonoBehaviour
 	private GameObject m_stuffObject = null;
 
 	[SerializeField]
+	private Collider m_stuffCollider1 = null;
+
+	[SerializeField]
 	private Transform m_stuffTransform = null;
 
 	[SerializeField]
-	private Collider m_stuffCollider = null;
+	private Collider m_stuffCollider2 = null;
 
 	#endregion
 
@@ -27,8 +30,9 @@ public class SomethingSomething : MonoBehaviour
 	private void OnEnable()
 	{
 		Debug.Log(m_stuffObject);
+		m_stuffCollider1.enabled = false;
 		Debug.Log(m_stuffTransform);
 
-		m_stuffCollider.enabled = false;
+		m_stuffCollider2.enabled = true;
 	}
 }
