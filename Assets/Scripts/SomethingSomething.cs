@@ -6,7 +6,8 @@ public class SomethingSomething : MonoBehaviour
 {
 #region Variables (serialized)
 
-
+	[SerializeField]
+	private GameObject m_stuffObject = null;
 
 	#endregion
 
@@ -17,5 +18,8 @@ public class SomethingSomething : MonoBehaviour
 	#endregion
 
 
-
+	private void OnEnable()
+	{
+		Debug.Log(m_stuffObject);
+	}
 }
