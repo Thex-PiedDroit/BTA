@@ -12,6 +12,9 @@ public class SomethingSomething : MonoBehaviour
 	[SerializeField]
 	private Transform m_stuffTransform = null;
 
+	[SerializeField]
+	private Collider m_stuffCollider = null;
+
 	#endregion
 
 #region Variables (private)
@@ -25,5 +28,7 @@ public class SomethingSomething : MonoBehaviour
 	{
 		Debug.Log(m_stuffObject);
 		Debug.Log(m_stuffTransform);
+
+		m_stuffCollider.enabled = false;
 	}
 }
