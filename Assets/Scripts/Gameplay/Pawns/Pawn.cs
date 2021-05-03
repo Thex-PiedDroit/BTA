@@ -23,4 +23,9 @@ public class Pawn : MonoBehaviour
 	{
 		Gizmos.DrawIcon(transform.position + m_bodyCenter, "scenevis_visible_hover@2x", true, Color.black);
 	}
+
+	public (Vector3 origin, Quaternion rotation) GetAttackOrigin()
+	{
+		return (transform.position + m_bodyCenter, transform.rotation);
+	}
 }
