@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4789e76d0db0ad48ad2ca3cc2ee8d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_attacksDescriptor: {fileID: 11400000, guid: bd5c9952f386a024e9c724f11b9fa755, type: 2}
   m_weaponAnimatorController: {fileID: 9100000, guid: bdecf2ecd708f4b43a58fe8bada5faab, type: 2}
 --- !u!1 &2067625153119350135
 GameObject:

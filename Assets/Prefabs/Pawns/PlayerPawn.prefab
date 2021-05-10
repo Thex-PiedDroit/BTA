@@ -31,6 +31,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73932a183ac0dc045af8136098aa29bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_master: {fileID: 9012995025169896487}
   m_pawnAnimatorRightHand: {fileID: 4901523810727943486}
   m_pawnAnimatorLeftHand: {fileID: 8998259663098142691}
   m_handRight: {fileID: 7911160247103433701}
@@ -67,6 +68,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &689340237808595177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4924347551390726029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68234aae529549542b582b870745dbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_combatComponent: {fileID: 5645634779307997419}
 --- !u!95 &4901523810727943486
 Animator:
   serializedVersion: 3
@@ -86,6 +100,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8970050294423189632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522424454907092266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68234aae529549542b582b870745dbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_combatComponent: {fileID: 5645634779307997419}
 --- !u!1001 &5849126179021724954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6492391373907744701, guid: 241dcf2ccecf0c84fb69e68b4e8e06c5, type: 3}
       propertyPath: m_Name
-      value: PlayerPawn Variant
+      value: PlayerPawn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 241dcf2ccecf0c84fb69e68b4e8e06c5, type: 3}
