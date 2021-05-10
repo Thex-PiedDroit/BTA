@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 
+
 public class MinMaxRangeAttribute : PropertyAttribute
 {
 	public float Min = 0.0f;

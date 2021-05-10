@@ -13,8 +13,17 @@ MonoBehaviour:
   m_Name: WeapDesc_Sword
   m_EditorClassIdentifier: 
   m_regularAttackSteps:
-  - m_shape: 0
-    m_boxShape:
-      m_offset: {x: 0, y: 1, z: 2}
-      m_halfDimensions: {x: 1.5, y: 1, z: 1.5}
+  - m_colliderShape:
+      m_shape: 0
+      m_boxShape:
+        m_offset: {x: 0, y: 0, z: 0}
+        m_halfDimensions: {x: 0, y: 0, z: 0}
+    m_canDamage: 1
+    m_damage:
+      Min: 0
+      Max: 2
+    m_canHeal: 0
+    m_heal:
+      Min: 0
+      Max: 1
   m_heavyAttackSteps: []

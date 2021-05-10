@@ -31,6 +31,6 @@ public class BoxColliderShape : ColliderShape
 
 	public override Collider[] GetCollision(Vector3 attackOrigin, Quaternion orientation, int layerMask)
 	{
-		return Physics.OverlapBox(attackOrigin + m_offset, m_halfDimensions, orientation, layerMask);
+		return Physics.OverlapBox(attackOrigin + m_offset, m_halfDimensions, orientation, layerMask, QueryTriggerInteraction.Ignore);
 	}
 }

@@ -10,9 +10,9 @@ public class ScriptedEventEditor : Editor
 {
 #region Variables (private)
 
-	private const string LIST_HEADER_NAME = "Attacks";
+	//private const string LIST_HEADER_NAME = "Attacks";
 	private const string REGULAR_ATTACKS_PROPERTY_NAME = "m_regularAttackSteps";
-	private const string HEAVY_ATTACKS_PROPERTY_NAME = "m_heavyAttackSteps";
+	//private const string HEAVY_ATTACKS_PROPERTY_NAME = "m_heavyAttackSteps";
 
 
 	private ReorderableList m_attacksList = null;
@@ -69,11 +69,14 @@ public class ScriptedEventEditor : Editor
 	private void DrawAttacksGizmo(Pawn pawn)
 	{
 		SerializedProperty attackDescriptions = serializedObject.FindProperty(REGULAR_ATTACKS_PROPERTY_NAME);
+		if (attackDescriptions.arraySize == 0)
+			return;
+
 		SerializedProperty firstAttack = attackDescriptions.GetArrayElementAtIndex(0);
-		AttackColliderShape colliderShape = EditorExtensions.GetTargetObjectOfProperty<AttackColliderShape>(firstAttack);
+		AttackDescriptor attackDescriptor = EditorExtensions.GetTargetObjectOfProperty<AttackDescriptor>(firstAttack);
 
 		(Vector3 attackOrigin, Quaternion attackRotation) = pawn.GetAttackOrigin();
-		colliderShape.DrawGizmo(attackOrigin, attackRotation, $"{AttackType.Regular} attack");
+		attackDescriptor.ColliderShape.DrawGizmo(attackOrigin, attackRotation, $"{AttackType.Regular} attack");
 	}
 
 	private void DrawAttacksList(Rect rect, int index)

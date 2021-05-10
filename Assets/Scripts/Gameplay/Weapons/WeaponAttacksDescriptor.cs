@@ -9,15 +9,15 @@ public enum AttackType
 	Heavy,
 }
 
-[CreateAssetMenu(fileName = nameof(WeaponAttacksDescriptor), menuName = "ScriptableObjects/Weapons/" + nameof(WeaponAttacksDescriptor))]
+[CreateAssetMenu(fileName = "WAD_" + nameof(WeaponAttacksDescriptor), menuName = "ScriptableObjects/Weapons/" + nameof(WeaponAttacksDescriptor))]
 public class WeaponAttacksDescriptor : ScriptableObject
 {
 #region Variables (serialized)
 
 	[SerializeField]
-	private List<AttackColliderShape> m_regularAttackSteps = null;
+	private List<AttackDescriptor> m_regularAttackSteps = null;
 	[SerializeField]
-	private List<AttackColliderShape> m_heavyAttackSteps = null;
+	private List<AttackDescriptor> m_heavyAttackSteps = null;
 
 	#endregion
 
@@ -31,7 +31,7 @@ public class WeaponAttacksDescriptor : ScriptableObject
 		return ++currentAttackID % maxID;
 	}
 
-	public AttackColliderShape GetAttack(AttackType attackType, int attackID)
+	public AttackDescriptor GetAttack(AttackType attackType, int attackID)
 	{
 		switch (attackType)
 		{
