@@ -434,9 +434,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6492391373907744700}
   - component: {fileID: 7530680708090660342}
+  - component: {fileID: 1385645106322516631}
   - component: {fileID: 594167067870121019}
+  - component: {fileID: 2318746163832625002}
+  - component: {fileID: 1309520353968804433}
   m_Layer: 7
-  m_Name: BasePawn
+  m_Name: Pfb_Pawn_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,6 +474,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!136 &1385645106322516631
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492391373907744701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &594167067870121019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -487,6 +504,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &2318746163832625002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492391373907744701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842131f004e227d4e8470061f6f7fdd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bodyCenter: {x: 0, y: 1, z: 0}
+  m_descriptor: {fileID: 0}
+--- !u!114 &1309520353968804433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492391373907744701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506c09c69e1f28647a8881d2bdfc0990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_master: {fileID: 2318746163832625002}
+  m_rigidbody: {fileID: 594167067870121019}
+  m_floatingDamageFeedbackPrefab: {fileID: 6468829822866490849, guid: 3fa0c23a878764b4e8b6c1b53e89731f, type: 3}
+  m_deathRagdollThrowForce: 10
 --- !u!1 &8227292466290212912
 GameObject:
   m_ObjectHideFlags: 0

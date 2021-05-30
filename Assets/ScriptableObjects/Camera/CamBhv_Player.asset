@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ced52ca61f3764ca63ee65b93891b4, type: 3}
-  m_Name: PlayerCameraBehavior
+  m_Name: CamBhv_Player
   m_EditorClassIdentifier: 
   m_offsetFromTarget: {x: 0, y: 10.75, z: -12}
   m_defaultRotation: {x: 38, y: 0, z: 0}

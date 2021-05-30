@@ -2,7 +2,7 @@
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = nameof(PlayerCameraBehavior), menuName = "ScriptableObjects/Camera/Behaviors/" + nameof(PlayerCameraBehavior))]
+[CreateAssetMenu(fileName = "CamBhv_" + nameof(PlayerCameraBehavior), menuName = "ScriptableObjects/Camera/Behaviors/" + nameof(PlayerCameraBehavior))]
 public class PlayerCameraBehavior : CameraBehavior
 {
 #region Variables (serialized)
